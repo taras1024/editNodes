@@ -465,7 +465,7 @@ async function startEditNodes () {
     for(let i = 0; i < 2; i++) {
         nodeLink = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/node/${nodeIdArr[i]}/edit`
         snippetPageView.contentWindow.location.href = nodeLink 
-        snippetPageView.onload = () => {
+        snippetPageView.onload = async () => {
             console.log (i, nodeIdArr[i])
            await setTimeout(() => console.log('3sec'), 3000)
         }   

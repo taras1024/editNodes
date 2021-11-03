@@ -47,12 +47,12 @@ function changePage() {
 	snippetUrl.value = url
 }
 
-snippetPageView.addEventListener('load', async () => {
-	changePage()
+// snippetPageView.addEventListener('load', async () => {
+// 	changePage()
     
-    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
-    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
-})
+//     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
+//     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
+// })
 
 snippetGoBtn.addEventListener('click', () => {
     startEditNodes()
@@ -85,8 +85,8 @@ function startEditNodes () {
         console.log('Start......')
 
         setTimeout(() => {
-            console.log('3sec ....')
-            editNode()
+            alert(i)
+            // editNode()
         }, 3000);
     }
 }

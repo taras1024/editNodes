@@ -47,12 +47,12 @@ function changePage() {
 	snippetUrl.value = url
 }
 
-// snippetPageView.addEventListener('load', async () => {
-// 	changePage()
-    
-//     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
-//     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
-// })
+snippetPageView.addEventListener('load', async () => {
+	changePage()
+    editNode()
+    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
+    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
+})
 
 snippetGoBtn.addEventListener('click', () => {
     startEditNodes()
@@ -66,12 +66,6 @@ const nodeIdStr = `6001
 
 const nodeIdArr = nodeIdStr.split('\n')
 
-// const fields = [
-//     {name:"buyNowFusepump",selector:"edit-field-product-fusepump-wrapper"},
-//     {name:"buyNowLink",selector:"edit-field-product-buy-link-wrapper"}
-// ]
-
-
 
 async function startEditNodes () {
     let nodeLink = ''
@@ -84,7 +78,7 @@ async function startEditNodes () {
         snippetPageView.contentWindow.location.href = nodeLink 
     	snippetUrl.value = nodeLink
 
-        await editNode()
+        // await editNode()
         
     }
 }

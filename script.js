@@ -85,8 +85,8 @@ function startEditNodes () {
     	snippetUrl.value = nodeLink
 
         setTimeout(() => {
-            alert(i)
-            // editNode()
+            console.log(i)
+            editNode()
         }, 3000);
     }
 }

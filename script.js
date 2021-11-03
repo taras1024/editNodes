@@ -80,7 +80,7 @@ async function startEditNodes () {
         snippetPageView.contentWindow.location.href = nodeLink 
         snippetPageView.onload = async () => {
             console.log (i, nodeIdArr[i])
-            editNode()
+            await editNode()
         }   
     }
 }

@@ -47,9 +47,10 @@ snippetPageView.addEventListener('load', () => {
 
     snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a').click()
 
+    
     buyNowFusepump ? editInput(buyNowFusepump) : console.log('Fusepump absent')
     buyNowLink ? editInput(buyNowFusepump) : console.log('Buy now link absent')
-    }
+    
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
 })
@@ -451,7 +452,7 @@ startEditNodes()
 
 async function startEditNodes () {
     let nodeLink = ''
-    for(let i = 0; i < 1; i++) {
+    for(let i = 0; i < 2; i++) {
         nodeLink = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/node/${nodeIdArr[i]}/edit`
         snippetPageView.contentWindow.location.href = nodeLink    
         // await editNode(nodeLink)

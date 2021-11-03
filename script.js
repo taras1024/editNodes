@@ -435,19 +435,17 @@ const nodeIdArr = nodeIdStr.split('\n')
 startEditNodes()
 
 
-
-
 async function startEditNodes () {
     let nodeLink = ''
     for(let i = 0; i < 1; i++) {
         nodeLink = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/node/${nodeIdArr[i]}/edit`
+        snippetPageView.contentWindow.location.href = nodeLink    
         await editNode(nodeLink)
     }
 
 }
 
 async function editNode (link) {
-    snippetPageView.contentWindow.location.href = link    
     console.log(`nodeLink: ${link}`)
 
     const fields = [

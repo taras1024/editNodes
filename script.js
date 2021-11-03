@@ -52,6 +52,8 @@ snippetPageView.addEventListener('load', async () => {
 
     const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
     const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
+    const saveBtn = snippetPageView.contentWindow.document.getElementById('edit-submit')
+
 
     snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a').click()
     snippetPageView.contentWindow.scrollTo(0,600)
@@ -59,6 +61,7 @@ snippetPageView.addEventListener('load', async () => {
     
     buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
     buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
+    saveBtn ? saveBtn.click() : console.log('saveBtn absent')
     
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
@@ -487,5 +490,5 @@ async function editNode (link) {
 
 async function editInput(node) {
 	const nodeInput = node.querySelector('input')
-	nodeInput.value = ''
+	nodeInput.value = nodeInput.value + 'E'
 }

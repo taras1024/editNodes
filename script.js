@@ -73,16 +73,16 @@ const nodeIdArr = nodeIdStr.split('\n')
 
 
 
-async function startEditNodes () {
+function startEditNodes () {
     let nodeLink = ''
     for(let i = 0; i < 2; i++) {
         nodeLink = `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/node/${nodeIdArr[i]}/edit`
-        snippetPageView.onload = async () => {
-            console.log (i, nodeIdArr[i])
-            await editNode()
-        }   
+        // snippetPageView.onload = async () => {
+        //     console.log (i, nodeIdArr[i])
+        //     await editNode()
+        // }   
         snippetPageView.contentWindow.location.href = nodeLink 
-        
+        editNode()
     }
 }
 

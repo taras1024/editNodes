@@ -45,16 +45,10 @@ snippetPageView.addEventListener('load', () => {
     const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
     const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
 
-    if(buyNowFusepump) {
-        editInput(buyNowFusepump)
-    } else {
-        console.log('Fusepump absent')
-    }
+    snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a').click()
 
-    if(buyNowLink) {
-        editInput(buyNowFusepump)
-    } else {
-        console.log('Buy now link absent')
+    buyNowFusepump ? editInput(buyNowFusepump) : console.log('Fusepump absent')
+    buyNowLink ? editInput(buyNowFusepump) : console.log('Buy now link absent')
     }
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
@@ -447,10 +441,10 @@ const nodeIdStr = `4061
 
 const nodeIdArr = nodeIdStr.split('\n')
 
-const fields = [
-    {name:"buyNowFusepump",selector:"edit-field-product-fusepump-wrapper"},
-    {name:"buyNowLink",selector:"edit-field-product-buy-link-wrapper"}
-]
+// const fields = [
+//     {name:"buyNowFusepump",selector:"edit-field-product-fusepump-wrapper"},
+//     {name:"buyNowLink",selector:"edit-field-product-buy-link-wrapper"}
+// ]
 
 startEditNodes()
 

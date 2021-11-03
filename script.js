@@ -82,8 +82,10 @@ function startEditNodes () {
         //     await editNode()
         // }   
         snippetPageView.contentWindow.location.href = nodeLink 
+        console.log('Start......')
 
         setTimeout(() => {
+            console.log('3sec ....')
             editNode()
         }, 3000);
     }

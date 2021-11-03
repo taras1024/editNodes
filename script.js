@@ -1,6 +1,7 @@
 const snippetMainContainer = document.createElement('div')
 const snippetNavContainer = document.createElement('div')
 const snippetUrl = document.createElement('input')
+const snippetGoBtn = document.createElement('button')
 const snippetPageView = document.createElement('iframe')
 snippetPageView.id = "snippetIframe"
 
@@ -17,17 +18,23 @@ snippetUrl.style.cssText = `border-radius: 20px 0 0 20px; padding:  5px 20px; te
 snippetUrl.style.cssText = `border-radius: 20px 0 0 20px; padding:  5px 20px; text-align: center; outline: none;
                                      color: #fff; border: 1px solid #69aa00; background-color: #0f0f0f; width: 70%`
  
+snippetGoBtn.style.cssText = `border-radius: 0 20px 20px 0; padding:  5px 20px; text-align: center;
+									 color: #fff; border: 1px solid #69aa00; background-color: #69aa00; outline: none;`
+
 snippetPageView.style.cssText = `width:100%; height: calc(100% - 146px); `
 
 
-
 snippetUrl.value = 'URL'
+snippetGoBtn.innerHTML = 'RUN SCRIPT'
+
 
 snippetNavContainer.append(snippetUrl)
+snippetNavContainer.append(snippetGoBtn)
 snippetMainContainer.append(snippetNavContainer)
 snippetMainContainer.append(snippetPageView)
 
 document.querySelector('body').appendChild(snippetMainContainer)
+
 
 
 snippetPageView.setAttribute('src', `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/admin/content`)
@@ -53,6 +60,10 @@ snippetPageView.addEventListener('load', () => {
     
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
+})
+
+snippetGoBtn.addEventListener('click', () => {
+    startEditNodes()
 })
 
 const nodeIdStr = `4061
@@ -447,7 +458,6 @@ const nodeIdArr = nodeIdStr.split('\n')
 //     {name:"buyNowLink",selector:"edit-field-product-buy-link-wrapper"}
 // ]
 
-startEditNodes()
 
 
 async function startEditNodes () {

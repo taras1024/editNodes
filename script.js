@@ -46,7 +46,7 @@ function changePage() {
 	snippetUrl.value = url
 }
 
-snippetPageView.addEventListener('load', () => {
+snippetPageView.addEventListener('load', async () => {
 	changePage()
 
     const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
@@ -55,8 +55,8 @@ snippetPageView.addEventListener('load', () => {
     snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a').click()
 
     
-    buyNowFusepump ? editInput(buyNowFusepump) : console.log('Fusepump absent')
-    buyNowLink ? editInput(buyNowFusepump) : console.log('Buy now link absent')
+    buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
+    buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
     
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))

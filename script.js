@@ -53,6 +53,7 @@ snippetPageView.addEventListener('load', async () => {
     const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
 
     snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a').click()
+    snippetPageView.contentWindow.scrollTo(0,600)
 
     
     buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
@@ -467,7 +468,6 @@ async function startEditNodes () {
         snippetPageView.contentWindow.location.href = nodeLink 
         snippetPageView.onload = async () => {
             console.log (i, nodeIdArr[i])
-           await setTimeout(() => console.log('3sec'), 3000)
         }   
         // await editNode(nodeLink)
     }

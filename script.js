@@ -2,6 +2,8 @@ const snippetMainContainer = document.createElement('div')
 const snippetNavContainer = document.createElement('div')
 const snippetUrl = document.createElement('input')
 const snippetPageView = document.createElement('iframe')
+snippetPageView.id = "snippetIframe"
+
 
 snippetMainContainer.style.cssText = `position: fixed; display:flex; align-items: center;
 												 left: 0; top: 0; width:100%; height: 100%; flex-direction: column;
@@ -19,10 +21,6 @@ snippetPageView.style.cssText = `width:100%; height: calc(100% - 146px); `
 
 
 
-snippetPageView.setAttribute('src', `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/admin/content`)
-snippetPageView.id = "snippetIframe"
-
-
 snippetUrl.value = 'URL'
 
 snippetNavContainer.append(snippetUrl)
@@ -30,6 +28,11 @@ snippetMainContainer.append(snippetNavContainer)
 snippetMainContainer.append(snippetPageView)
 
 document.querySelector('body').appendChild(snippetMainContainer)
+
+
+snippetPageView.setAttribute('src', `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/admin/content`)
+
+
 
 function changePage() {
 	const url = snippetPageView.contentWindow.location.href

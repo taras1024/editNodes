@@ -68,10 +68,10 @@ snippetGoBtn.addEventListener('click', () => {
     startEditNodes()
 })
 
-const nodeIdStr = `9930
-9929
-9928
-9356`
+const nodeIdStr = `6001
+5996
+5296
+5291`
 // const nodeIdStr = `4061
 // 4066
 // 4071

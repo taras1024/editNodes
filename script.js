@@ -41,6 +41,23 @@ function changePage() {
 
 snippetPageView.addEventListener('load', () => {
 	changePage()
+
+    const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
+    const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
+
+    if(buyNowFusepump) {
+        editInput(buyNowFusepump)
+    } else {
+        console.log('Fusepump absent')
+    }
+
+    if(buyNowLink) {
+        editInput(buyNowFusepump)
+    } else {
+        console.log('Buy now link absent')
+    }
+    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
+    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
 })
 
 const nodeIdStr = `4061
@@ -430,7 +447,10 @@ const nodeIdStr = `4061
 
 const nodeIdArr = nodeIdStr.split('\n')
 
-
+const fields = [
+    {name:"buyNowFusepump",selector:"edit-field-product-fusepump-wrapper"},
+    {name:"buyNowLink",selector:"edit-field-product-buy-link-wrapper"}
+]
 
 startEditNodes()
 
@@ -440,21 +460,13 @@ async function startEditNodes () {
     for(let i = 0; i < 1; i++) {
         nodeLink = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/node/${nodeIdArr[i]}/edit`
         snippetPageView.contentWindow.location.href = nodeLink    
-        await editNode(nodeLink)
+        // await editNode(nodeLink)
     }
 
 }
 
 async function editNode (link) {
     console.log(`nodeLink: ${link}`)
-
-    const fields = [
-        {name:"buyNowFusepump",selector:"edit-field-product-fusepump-wrapper"},
-        {name:"buyNowLink",selector:"edit-field-product-buy-link-wrapper"}
-    ]
-
-    await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
-    await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
 
 }
 

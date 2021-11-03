@@ -82,7 +82,10 @@ function startEditNodes () {
         //     await editNode()
         // }   
         snippetPageView.contentWindow.location.href = nodeLink 
-        editNode()
+
+        setTimeout(() => {
+            editNode()
+        }, 3000);
     }
 }
 

@@ -49,19 +49,6 @@ function changePage() {
 
 snippetPageView.addEventListener('load', async () => {
 	changePage()
-
-    const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
-    const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
-    const saveBtn = snippetPageView.contentWindow.document.getElementById('edit-submit')
-
-
-    snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a').click()
-    snippetPageView.contentWindow.scrollTo(0,600)
-
-    
-    buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
-    buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
-    saveBtn ? saveBtn.click() : console.log('saveBtn absent')
     
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
     // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
@@ -476,15 +463,28 @@ async function startEditNodes () {
         snippetPageView.contentWindow.location.href = nodeLink 
         snippetPageView.onload = async () => {
             console.log (i, nodeIdArr[i])
+            editNode()
         }   
-        // await editNode(nodeLink)
     }
-
 }
 
-async function editNode (link) {
-    console.log(`nodeLink: ${link}`)
+async function editNode () {
+    // console.log(`nodeLink: ${link}`)
 
+    const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
+    const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
+    const firstTab = snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a')
+    const saveBtn = snippetPageView.contentWindow.document.getElementById('edit-submit')
+
+    if(firstTab) {
+        firstTab.click()
+    }
+
+    snippetPageView.contentWindow.scrollTo(0,600)
+    
+    buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
+    buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
+    saveBtn ? saveBtn.click() : console.log('saveBtn absent')
 }
 
 

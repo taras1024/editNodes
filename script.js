@@ -466,8 +466,8 @@ async function startEditNodes () {
         nodeLink = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/node/${nodeIdArr[i]}/edit`
         snippetPageView.contentWindow.location.href = nodeLink 
         snippetPageView.onload = () => {
-            console.log (i)
-            setTimeout(() => console.log('3sec'), 3000)
+            console.log (i, nodeIdArr[i])
+           await setTimeout(() => console.log('3sec'), 3000)
         }   
         // await editNode(nodeLink)
     }

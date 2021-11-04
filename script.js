@@ -37,8 +37,8 @@ document.querySelector('body').appendChild(snippetMainContainer)
 
 
 
-// snippetPageView.setAttribute('src', `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/admin/content`)
-snippetPageView.setAttribute('src', `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/admin/content`)
+snippetPageView.setAttribute('src', `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/admin/content`)
+// snippetPageView.setAttribute('src', `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/admin/content`)
 
 
 
@@ -80,7 +80,7 @@ async function startEditNodes () {
         // snippetPageView.src = nodeLink
     	// snippetUrl.value = nodeLink
         
-        await editNode()
+        // await editNode()
         
     }
 }

@@ -72,12 +72,16 @@ function startEditNodes () {
         //     console.log (i, nodeIdArr[i])
         //     await editNode()
         // }   
-        // snippetPageView.contentWindow.location.href = nodeLink 
-        snippetPageView.src = nodeLink
+        snippetPageView.contentWindow.location.href = nodeLink 
+        console.log(snippetPageView.contentWindow.document.readyState)
+        while(snippetPageView.contentWindow.document.readyState != 'complete') {
+            console.log(snippetPageView.contentWindow.document.readyState)
+        }
+        // snippetPageView.src = nodeLink
 
     	// snippetUrl.value = nodeLink
         
-        editNode()
+        await editNode()
         
     }
 }

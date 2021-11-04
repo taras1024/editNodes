@@ -72,8 +72,10 @@ function startEditNodes () {
         //     console.log (i, nodeIdArr[i])
         //     await editNode()
         // }   
-        snippetPageView.contentWindow.location.href = nodeLink 
-    	snippetUrl.value = nodeLink
+        // snippetPageView.contentWindow.location.href = nodeLink 
+        snippetPageView.src = nodeLink
+
+    	// snippetUrl.value = nodeLink
         
         editNode()
         
@@ -96,7 +98,7 @@ async function editNode () {
     
     buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
     buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
-    saveBtn ? saveBtn.click() : console.log('saveBtn absent')
+    // saveBtn ? saveBtn.click() : console.log('saveBtn absent')
 }
 
 

@@ -49,9 +49,6 @@ function changePage() {
 
 snippetPageView.addEventListener('load', async () => {
 	changePage()
-    editNode()
-    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[0].selector))
-    // await editInput(snippetPageView.contentWindow.document.getElementById(fields[1].selector))
 })
 
 snippetGoBtn.addEventListener('click', () => {
@@ -67,7 +64,7 @@ const nodeIdStr = `6001
 const nodeIdArr = nodeIdStr.split('\n')
 
 
-async function startEditNodes () {
+function startEditNodes () {
     let nodeLink = ''
     for(let i = 0; i < 3; i++) {
         nodeLink = `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/node/${nodeIdArr[i]}/edit`
@@ -77,8 +74,8 @@ async function startEditNodes () {
         // }   
         snippetPageView.contentWindow.location.href = nodeLink 
     	snippetUrl.value = nodeLink
-
-        // await editNode()
+        
+        editNode()
         
     }
 }
@@ -86,9 +83,6 @@ async function startEditNodes () {
 async function editNode () {
     // console.log(`nodeLink: ${link}`)
 
-    setTimeout(() => {
-        console.log(snippetPageView.contentWindow.location.href)
-    }, 3000);
     const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
     const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
     const firstTab = snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a')

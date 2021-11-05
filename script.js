@@ -64,48 +64,48 @@ const nodeIdStr = `6001
 const nodeIdArr = nodeIdStr.split('\n')
 
 
-async function startEditNodes () {
-    let nodeLink = ''
-    for(let i = 0; i < 3; i++) {
-        nodeLink = `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/node/${nodeIdArr[i]}/edit`
-        // snippetPageView.onload = async () => {
-        //     console.log (i, nodeIdArr[i])
-        //     await editNode()
-        // }   
-        snippetPageView.contentWindow.location.href = nodeLink 
-        console.log(snippetPageView.contentWindow.document.readyState)
-        while(snippetPageView.contentWindow.document.readyState != 'complete') {
-            console.log(snippetPageView.contentWindow.document.readyState)
-        }
-        // snippetPageView.src = nodeLink
-    	// snippetUrl.value = nodeLink
+// async function startEditNodes () {
+//     let nodeLink = ''
+//     for(let i = 0; i < 3; i++) {
+//         nodeLink = `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/node/${nodeIdArr[i]}/edit`
+//         // snippetPageView.onload = async () => {
+//         //     console.log (i, nodeIdArr[i])
+//         //     await editNode()
+//         // }   
+//         snippetPageView.contentWindow.location.href = nodeLink 
+//         console.log(snippetPageView.contentWindow.document.readyState)
+//         while(snippetPageView.contentWindow.document.readyState != 'complete') {
+//             console.log(snippetPageView.contentWindow.document.readyState)
+//         }
+//         // snippetPageView.src = nodeLink
+//     	// snippetUrl.value = nodeLink
         
-        // await editNode()
+//         // await editNode()
         
-    }
-}
+//     }
+// }
 
-async function editNode () {
-    // console.log(`nodeLink: ${link}`)
+// async function editNode () {
+//     // console.log(`nodeLink: ${link}`)
 
-    const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
-    const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
-    const firstTab = snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a')
-    const saveBtn = snippetPageView.contentWindow.document.getElementById('edit-submit')
+//     const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-wrapper')
+//     const buyNowLink = snippetPageView.contentWindow.document.getElementById('edit-field-product-buy-link-wrapper')
+//     const firstTab = snippetPageView.contentWindow.document.querySelector('.horizontal-tab-button-0 a')
+//     const saveBtn = snippetPageView.contentWindow.document.getElementById('edit-submit')
 
-    if(firstTab) {
-        firstTab.click()
-    }
+//     if(firstTab) {
+//         firstTab.click()
+//     }
 
-    snippetPageView.contentWindow.scrollTo(0,600)
+//     snippetPageView.contentWindow.scrollTo(0,600)
     
-    buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
-    buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
-    // saveBtn ? saveBtn.click() : console.log('saveBtn absent')
-}
+//     buyNowFusepump ? await editInput(buyNowFusepump) : console.log('Fusepump absent')
+//     buyNowLink ? await editInput(buyNowFusepump) : console.log('Buy now link absent')
+//     // saveBtn ? saveBtn.click() : console.log('saveBtn absent')
+// }
 
 
-async function editInput(node) {
-	const nodeInput = node.querySelector('input')
-	nodeInput.value = nodeInput.value + 'E'
-}
+// async function editInput(node) {
+// 	const nodeInput = node.querySelector('input')
+// 	nodeInput.value = nodeInput.value + 'E'
+// }

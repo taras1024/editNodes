@@ -42,7 +42,6 @@ snippetPageView.setAttribute('src', `${baseURL}/admin/content`)
 // snippetPageView.setAttribute('src', `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/admin/content`)
 
 
-
 function changePage() {
     const url = snippetPageView.contentWindow.location.href
     snippetUrlInput.value = url
@@ -69,7 +68,7 @@ snippetPageView.addEventListener('load', function () {
             }, 500)
             console.log('FROM EVENT', snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
         } else {
-            count++
+            // count++
             snippetPageView.src = `${baseURL}/node/${nodeIdArr1[count]}/edit`
         }
     }

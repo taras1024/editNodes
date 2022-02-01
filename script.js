@@ -86,7 +86,7 @@ snippetPageView.addEventListener('load', function () {
 
 let nodeIdStr1 = ``
 
-// const nodeIdArr1 = nodeIdStr1.split('\n')
+const nodeIdArr1 = nodeIdStr1.split('\n')
 
 
 // snippetPageView.src = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/en/node/${nodeIdArr1[count]}/edit`

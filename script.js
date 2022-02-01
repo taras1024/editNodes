@@ -120,10 +120,10 @@ function editNode() {
     //         relatedProdTab.click()
     //     }
 
-    relatedProd1 ? relatedProd1.value = '' : console.log('relatedProd1 absent')
-    relatedProd2 ? relatedProd2.value = '' : console.log('relatedProd2 absent')
-    relatedProd3 ? relatedProd3.value = '' : console.log('relatedProd3 absent')
-    relatedProd4 ? relatedProd4.value = '' : console.log('relatedProd4 absent')
+    // relatedProd1 ? relatedProd1.value = '' : console.log('relatedProd1 absent')
+    // relatedProd2 ? relatedProd2.value = '' : console.log('relatedProd2 absent')
+    // relatedProd3 ? relatedProd3.value = '' : console.log('relatedProd3 absent')
+    // relatedProd4 ? relatedProd4.value = '' : console.log('relatedProd4 absent')
 
     snippetPageView.contentWindow.confirm = function () { return true; }
     window.confirm = function () { return true; }

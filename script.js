@@ -64,13 +64,13 @@ snippetPageView.addEventListener('load', function () {
                 console.log(`${count} FROM EVENT TIMEOUT`, snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
                 count++
                 if (nodeIdArr1[count]) {
-                    snippetPageView.src = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/en/node/${nodeIdArr1[count]}/edit`
+                    snippetPageView.src = `${baseURL}/node/${nodeIdArr1[count]}/edit`
                 }
             }, 500)
             console.log('FROM EVENT', snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
         } else {
             count++
-            snippetPageView.src = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/en/node/${nodeIdArr1[count]}/edit`
+            snippetPageView.src = `${baseURL}/node/${nodeIdArr1[count]}/edit`
         }
     }
 

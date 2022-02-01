@@ -84,7 +84,7 @@ snippetPageView.addEventListener('load', function () {
 // const nodeIdArr = nodeIdStr.split('\n')
 
 
-let nodeIdStr1
+let nodeIdStr1 = ``
 
 // const nodeIdArr1 = nodeIdStr1.split('\n')
 

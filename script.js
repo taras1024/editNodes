@@ -110,7 +110,7 @@ snippetRunBtn.addEventListener('click', () => {
     nodeIdStr1 = snippetInput.value
     nodeIdArr1 = nodeIdStr1.split('\n')
 
-    snippetPageView.setAttribute('src', `${baseURL} /admin/content`)
+    snippetPageView.setAttribute('src', `${baseURL}/admin/content`)
 })
 
 
@@ -135,8 +135,6 @@ snippetPageView.addEventListener('load', function () {
     }
 
 })
-
-
 
 
 

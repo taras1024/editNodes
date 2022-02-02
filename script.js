@@ -58,7 +58,7 @@ snippetInput.style.cssText = `width: 400px; height: 200px; border-radius:  20px;
 
 snippetPageView.id = "snippetIframe"
 
-snippetUrlInput.value = 'URL'
+snippetUrlInput.value = 'Insert WebSite base URL here...'
 snippetGoBtn.innerHTML = 'GO'
 
 snippetControlContainer.append(snippetControlLeftSide)

@@ -99,9 +99,6 @@ function changePage() {
     snippetUrlInput.value = url
 }
 
-// snippetGoBtn.addEventListener('click', () => {
-//     startEditNodes()
-// })
 
 snippetRunBtn.addEventListener('click', () => {
     count = 0
@@ -137,8 +134,6 @@ snippetPageView.addEventListener('load', function () {
 })
 
 
-
-// snippetPageView.src = `https://live-dig0028577-petcare-purinattt-austria.pantheonsite.io/en/node/${nodeIdArr1[count]}/edit`
 
 function editNode() {
     const buyNowFusepump = snippetPageView.contentWindow.document.getElementById('edit-field-product-fusepump-0-value')

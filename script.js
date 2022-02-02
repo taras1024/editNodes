@@ -32,7 +32,7 @@ snippetRunBtn.style.cssText = `background-color: red; ${snippetBtnStyle}`
 
 snippetInput.placeholder = 'Insert nodes IDs here...'
 
-snippetBtnContainer.style.cssText = ` padding: 0 10px; display:flex;  justify-content:space-between`
+snippetBtnContainer.style.cssText = `padding: 0 10px; display:flex; justify-content:space-between`
 
 snippetMainContainer.style.cssText = `position: fixed; display:flex; align-items: center;
 												 left: 0; top: 0; width:100%; height: 100%; flex-direction: column;
@@ -85,13 +85,9 @@ bodyNode.append(snippetMainContainer)
 
 
 let baseURL = 'https://live-dig0030184-petcare-purinattt-spain.pantheonsite.io'
-let nodeIdStr1 = ``
-let nodeIdArr1 = nodeIdStr1.split('\n')
+let nodeIdStr = ``
+let nodeIdArr = nodeIdStr.split('\n')
 let count = 0
-
-
-// snippetPageView.setAttribute('src', `${baseURL} /admin/content`)
-// snippetPageView.setAttribute('src', `https://uat-74995-petcare-purinattt-unitedkingdom.pantheonsite.io/admin/content`)
 
 
 function changePage() {
@@ -104,8 +100,8 @@ snippetRunBtn.addEventListener('click', () => {
     count = 0
     baseURL = snippetUrlInput.value
 
-    nodeIdStr1 = snippetInput.value
-    nodeIdArr1 = nodeIdStr1.split('\n')
+    nodeIdStr = snippetInput.value
+    nodeIdArr = nodeIdStr.split('\n')
 
     snippetPageView.setAttribute('src', `${baseURL}/admin/content`)
 })
@@ -114,20 +110,20 @@ snippetRunBtn.addEventListener('click', () => {
 snippetPageView.addEventListener('load', function () {
     changePage()
 
-    if (nodeIdArr1[count]) {
+    if (nodeIdArr[count]) {
         if (snippetPageView.src.includes('edit')) {
             editNode()
             setTimeout(() => {
-                console.log(`${count} FROM EVENT TIMEOUT`, snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
+                // console.log(`${count} FROM EVENT TIMEOUT`, snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
                 count++
-                if (nodeIdArr1[count]) {
-                    snippetPageView.src = `${baseURL}/node/${nodeIdArr1[count]}/edit`
+                if (nodeIdArr[count]) {
+                    snippetPageView.src = `${baseURL}/node/${nodeIdArr[count]}/edit`
                 }
             }, 500)
-            console.log('FROM EVENT', snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
+            // console.log('FROM EVENT', snippetPageView.src.slice(snippetPageView.src.indexOf('node')))
         } else {
             // count++
-            snippetPageView.src = `${baseURL}/node/${nodeIdArr1[count]}/edit`
+            snippetPageView.src = `${baseURL}/node/${nodeIdArr[count]}/edit`
         }
     }
 

@@ -30,7 +30,7 @@ snippetRunBtn.id = 'snippetRunBtn'
 snippetRunBtn.innerHTML = 'RUN'
 snippetRunBtn.style.cssText = `background-color: red; ${snippetBtnStyle}`
 
-snippetInput.placeholder = 'Insert links here...'
+snippetInput.placeholder = 'Insert nodes IDs here...'
 
 snippetBtnContainer.style.cssText = ` padding: 0 10px; display:flex;  justify-content:space-between`
 

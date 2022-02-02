@@ -49,7 +49,7 @@ snippetNavContainer.style.cssText = `width: 100%;  padding: 20px 5px; background
 snippetUrlInput.style.cssText = `border-radius: 20px 0 0 20px; padding:  10px 20px; text-align: center; outline: none;
 									 color: #fff; border: 1px solid #69aa00; background-color: #0f0f0f; width: 70%`
 
-snippetGoBtn.style.cssText = `border-radius: 0 20px 20px 0; padding:  5px 20px; text-align: center;
+snippetGoBtn.style.cssText = `border-radius: 0 20px 20px 0; padding: 5px 20px; cursor: auto; text-align: center;
 									 color: #fff; border: 1px solid #69aa00; background-color: #69aa00; outline: none;`
 
 snippetInput.style.cssText = `width: 400px; height: 200px; border-radius:  20px; resize: none; padding: 4px 10px; outline: none; background-color: #0f0f0f;
